@@ -11,7 +11,6 @@ def verify_certificate():
 
     if not cert_id:
         return jsonify({"error": "cert_id is required"}), 400
-
     record = df[df["cert_id"] == cert_id]
 
     if not record.empty:
