@@ -7,6 +7,10 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Auth API")
 
+@app.get("/")
+def read_root():
+    return {"message": "Hello, this is the root endpoint!"}
+    
 # Allow requests from React dev server (change in production)
 app.add_middleware(
     CORSMiddleware,
