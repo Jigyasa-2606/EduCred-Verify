@@ -6,7 +6,6 @@ import os
 DATABASE_PATH = os.path.join(os.path.dirname(__file__), '..', 'your_database.db')
 
 def get_db_connection():
-    """Creates a connection to the SQLite database."""
     conn = sqlite3.connect(DATABASE_PATH)
     # This allows us to get rows as dictionaries, which is nicer
     conn.row_factory = sqlite3.Row
@@ -53,7 +52,9 @@ def get_institution_assets(institution_code):
     """Query the database to get the file paths for an institution's seal and signature"""
     conn = get_db_connection()
     cursor = conn.cursor()
+
     cursor.execute("SELECT seal_image_path, signature_image_path FROM institutions WHERE code = ?", (institution_code,))
+
     result = cursor.fetchone()
     conn.close()
     if result:
