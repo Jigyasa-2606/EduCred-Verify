@@ -28,12 +28,11 @@ def init_database():
     """
     cursor.execute(create_table_sql)
 
-    # 2. SQL CODE: Insert data for your institutions with corrected codes
+    # 2. SQL CODE: Insert data for your institutions WITH CORRECTED PATHS
     institutions_data = [
-        ('JHAR', 'Jharkhand State University', 'assets/seals/jhar_seal.png', 'assets/signatures/jhar_signature.png'),
-        ('RANC', 'Ranchi Tech Institute', 'assets/seals/ranc_seal.png', 'assets/signatures/ranc_signature.png'),
-        ('JHAR_BS', 'Jharkhand Business School', 'assets/seals/jhar_bs_seal.png', 'assets/signatures/jhar_bs_signature.png'),
-        # Add more institutions here as needed
+        ('JHAR', 'Jharkhand State University', 'backend/assets/seals/jhar_seal.png', 'backend/assets/signatures/jhar_signature.png'),
+        ('RANC', 'Ranchi Tech Institute', 'backend/assets/seals/ranc_seal.png', 'backend/assets/signatures/ranc_signature.png'),
+        ('JHAR_BS', 'Jharkhand Business School', 'backend/assets/seals/jhar_bs_seal.png', 'backend/assets/signatures/jhar_bs_signature.png'),
     ]
 
     insert_sql = """

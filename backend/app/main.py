@@ -1,10 +1,72 @@
-# backend/app/main.py (or a separate service file)
-from .database import get_institution_assets
-from .utils import get_institution_code_from_name  # Import the new helper
+# backend/app/main.py
+from fastapi import FastAPI, UploadFile, File, HTTPException
+from .database import init_database, get_institution_assets
+from .utils import get_institution_code_from_name
+from .forgery_detection import verify_seal, verify_signature, extract_roi
 import cv2
 import os
+import uvicorn
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) # Points to /backend
+# Initialize the app
+app = FastAPI(title="Academic Certificate Verifier")
+
+# Initialize the database when the app starts
+@app.on_event("startup")
+def on_startup():
+    init_database()
+    print("Database initialized successfully!")
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Points to /backend
+
+@app.post("/verify")
+async def verify_certificate_endpoint(
+    file: UploadFile = File(...),
+    institution: str = None,
+    seal_roi: str = None,
+    signature_roi: str = None
+):
+    """
+    API endpoint to verify a certificate
+    """
+    try:
+        # Save uploaded file temporarily
+        file_path = f"temp_{file.filename}"
+        with open(file_path, "wb") as buffer:
+            content = await file.read()
+            buffer.write(content)
+        
+        # TODO: Integrate with OCR service to get text data
+        # For now, use provided institution or default
+        ocr_data = {
+            'institution': institution or 'Jharkhand State University',
+            # Add other OCR fields as needed
+        }
+        
+        # TODO: Extract seal and signature regions (for now use provided ROIs or defaults)
+        # This would come from your OCR results or config
+        img = cv2.imread(file_path)
+        
+        # Use provided ROIs or default to entire image (for testing)
+        if seal_roi:
+            seal_region = extract_roi(img, eval(seal_roi))
+        else:
+            seal_region = img  # Default for testing
+            
+        if signature_roi:
+            signature_region = extract_roi(img, eval(signature_roi))
+        else:
+            signature_region = img  # Default for testing
+        
+        # Perform verification
+        result = verify_certificate(ocr_data, seal_region, signature_region)
+        
+        # Clean up
+        os.remove(file_path)
+        
+        return result
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Verification error: {str(e)}")
 
 def verify_certificate(ocr_data, extracted_seal_image, extracted_signature_image):
     """
@@ -15,12 +77,29 @@ def verify_certificate(ocr_data, extracted_seal_image, extracted_signature_image
     institution_code = get_institution_code_from_name(institution_name)
     
     if not institution_code:
-        return {"authentic": False, "error": f"Unknown institution: {institution_name}"}
+        return {
+            "authentic": False, 
+            "error": f"Unknown institution: {institution_name}",
+            "details": {
+                "institution": institution_name,
+                "seal_score": 0.0,
+                "signature_score": 0.0
+            }
+        }
     
     # 2. Get the paths from the database
     assets = get_institution_assets(institution_code)
     if not assets:
-        return {"authentic": False, "error": f"Institution assets not found for: {institution_code}"}
+        return {
+            "authentic": False, 
+            "error": f"Institution assets not found for: {institution_code}",
+            "details": {
+                "institution": institution_name,
+                "institution_code": institution_code,
+                "seal_score": 0.0,
+                "signature_score": 0.0
+            }
+        }
 
     # 3. Construct full paths and load reference images
     ref_seal_path = os.path.join(BASE_DIR, assets['seal_path'])
@@ -30,14 +109,55 @@ def verify_certificate(ocr_data, extracted_seal_image, extracted_signature_image
     ref_signature = cv2.imread(ref_signature_path, 0)
     
     if ref_seal is None:
-        return {"authentic": False, "error": f"Reference seal not found at: {ref_seal_path}"}
+        return {
+            "authentic": False, 
+            "error": f"Reference seal not found at: {ref_seal_path}",
+            "details": {
+                "institution": institution_name,
+                "institution_code": institution_code,
+                "seal_score": 0.0,
+                "signature_score": 0.0
+            }
+        }
+    
     if ref_signature is None:
-        return {"authentic": False, "error": f"Reference signature not found at: {ref_signature_path}"}
+        return {
+            "authentic": False, 
+            "error": f"Reference signature not found at: {ref_signature_path}",
+            "details": {
+                "institution": institution_name,
+                "institution_code": institution_code,
+                "seal_score": 0.0,
+                "signature_score": 0.0
+            }
+        }
     
     # 4. Perform the verification checks
     seal_score = verify_seal(extracted_seal_image, ref_seal)
-    signature_valid = verify_signature(extracted_signature_image, ref_signature)
+    signature_score = verify_signature(extracted_signature_image, ref_signature)
     
-    # ... [rest of your verification logic] ...
+    # Use lower thresholds for testing - adjust as needed
+    seal_authentic = seal_score >= 0.3
+    signature_authentic = signature_score >= 0.05
+    overall_authentic = seal_authentic and signature_authentic
     
-    return result
+    return {
+        "authentic": overall_authentic,
+        "details": {
+            "institution": institution_name,
+            "institution_code": institution_code,
+            "seal_score": round(seal_score, 3),
+            "signature_score": round(signature_score, 3),
+            "seal_authentic": seal_authentic,
+            "signature_authentic": signature_authentic,
+            "seal_threshold": 0.3,
+            "signature_threshold": 0.05
+        }
+    }
+
+@app.get("/")
+async def root():
+    return {"message": "Academic Certificate Verification API", "status": "active"}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
