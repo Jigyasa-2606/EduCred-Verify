@@ -3,7 +3,7 @@ import pytesseract
 from PIL import Image
 import pandas as pd
 
-df = pd.read_csv("/sih_dataset.csv")
+df = pd.read_csv("/ocr_dataset.csv")
 
 def normalize_cert_id(cert_id):
     if cert_id:
@@ -55,6 +55,7 @@ def verify_certificate(image_path, df):
         print("\n Certificate FOUND in database:", record.to_dict(orient="records")[0])
     else:
         print("\n Certificate NOT found in database.")
+
 
 certificates = [
     "/Users/jigyasaverma/Desktop/backend/Edu_cred_verify/EduCred-Verify/backend/certificates/JBS Certificate.png",

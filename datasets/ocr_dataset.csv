@@ -1,0 +1,101 @@
+cert_id,name,dob,course,year,grade,institution,issued_on,certificate_type,institution_code,status,digital_hash
+JH-UNI-2018-001,Rajesh Kumar,1997-05-14,B.Tech CSE,2018,A+,Jharkhand State University,2018-07-11,Degree,JHAR,valid,d84b47f12b159277756b13d754465ac41529484c56702fc4aa5570dd28950f37
+JH-UNI-2018-002,Priya Sharma,1996-11-21,B.Sc Physics,2018,B+,Ranchi Tech Institute,2018-09-03,Degree,RANC,valid,e0546dcbd3eeae49f8ec49943f89bb6bda8fb58df6c5f4659d5e3ee96983e07a
+JH-UNI-2018-003,Amit Verma,1995-03-09,MBA Finance,2018,A,Jharkhand Business School,2018-12-20,Degree,JHAR,valid,2c87b9df4ebadb9446713d93637b34d28d00a271776c8c2203dc8faa6c8dc435
+JH-UNI-2018-004,Sneha Gupta,1998-07-25,BA English,2018,B,Jharkhand State University,2018-05-15,Degree,JHAR,valid,e6fa3c6986e630ea9a113e0ead5b26c29aa5ebb6b4305981fe7bca4365694adc
+JH-UNI-2018-005,Rohit Singh,1997-02-18,M.Sc Maths,2018,C,Ranchi Tech Institute,2018-08-27,Degree,RANC,valid,87869a430e55f678f7aad7dfecc67eebfe5ce693618b07566f954ceb2e259e09
+JH-UNI-2019-006,Anjali Kumari,1998-04-12,B.Tech CSE,2019,A+,Jharkhand Business School,2019-06-10,Degree,JHAR,valid,bfc0edc34a2a1c74b888da91824e47f0c5c26eefebb3aad24a82bc56c73c1988
+JH-UNI-2019-007,Deepak Yadav,1996-10-06,BBA,2019,B+,Jharkhand State University,2019-09-22,Degree,JHAR,valid,c3d503cf28cd33d6a1b2afdd39297b83aec3ba1b292a85952cc02b1a2118587b
+JH-UNI-2019-008,Pooja Das,1997-01-30,B.Sc Physics,2019,A,Ranchi Tech Institute,2019-11-02,Degree,RANC,valid,34af019cf29c48bfff1b87b39e972859e27ffb8fdac7cfdc5da04fc4de6df7f2
+JH-UNI-2019-009,Alok Mishra,1995-08-19,B.Tech CSE,2019,B,Jharkhand State University,2019-07-25,Degree,JHAR,valid,092f672a40864de9d10b674eac057eb9ae3a6cbd22e2cf1a7a208abf12985cf6
+JH-UNI-2019-010,Kiran Jha,1996-06-05,BA English,2019,A+,Jharkhand Business School,2019-05-29,Degree,JHAR,valid,e0be61bf62021e4d2de79046d855c7295d0089fb1cbfc511356cd3e2b17a0cbd
+JH-UNI-2020-011,Arun Kumar,1997-07-12,BBA,2020,A,Ranchi Tech Institute,2020-08-17,Degree,RANC,valid,3808c0d472e86995e11689f5166ee3fdc9aa6d9d5ed6db8ed04ba3d2a1165690
+JH-UNI-2020-012,Shruti Sinha,1998-12-08,M.Sc Maths,2020,B+,Jharkhand State University,2020-10-10,Degree,JHAR,valid,8696de8a14394032e03e2cc46d814df2279480925af4cbd7a9b844495cb2aab6
+JH-UNI-2020-013,Manish Prasad,1996-03-15,B.Tech CSE,2020,C,Jharkhand Business School,2020-07-14,Degree,JHAR,valid,74c2a04c813f80c865dfb0384d90ea98dbaf4547e687829d594d67425b0935a8
+JH-UNI-2020-014,Kavita Devi,1997-09-23,B.Sc Physics,2020,A+,Ranchi Tech Institute,2020-09-01,Degree,RANC,valid,d5d105a877676d54ac0206b5045ad1d104ad79b76e97089508cabeb1699f4835
+JH-UNI-2020-015,Vikram Thakur,1995-04-10,MBA Finance,2020,B,Jharkhand State University,2020-12-03,Degree,JHAR,valid,1051e4931e929ee246517e960a975fe8ed1879fc225c231de54f6220ffab2846
+JH-UNI-2021-016,Sapna Kumari,1998-05-28,B.Tech CSE,2021,A,Jharkhand Business School,2021-08-05,Degree,JHAR,valid,0006e59d7667114ecc4bdde44ec11231068d9506ecf83f3328f083f41f1a5169
+JH-UNI-2021-017,Prakash Ranjan,1997-02-04,BA English,2021,B+,Jharkhand State University,2021-09-21,Degree,JHAR,valid,79feaa1db30647f0f37ec50ba173ea26642873739867208ffb2858cf337db1be
+JH-UNI-2021-018,Meera Pandey,1996-11-12,B.Sc Physics,2021,C,Ranchi Tech Institute,2021-06-13,Degree,RANC,valid,00b21e8a6f3491d4eb94f7de2e7c2a7e5a7c73e845c763b5cc47854e106354da
+JH-UNI-2021-019,Suresh Das,1997-07-18,BBA,2021,A+,Jharkhand Business School,2021-11-09,Degree,JHAR,valid,ce629eff99d44949da94e022d7db959c9deea592ed239d83c3775ffa7d395f57
+JH-UNI-2021-020,Neha Gupta,1995-10-27,M.Sc Maths,2021,A,Ranchi Tech Institute,2021-05-24,Degree,RANC,valid,4440342d0f10f0cf4dc7f13c89a526b4c22fc8bd5df9e5236af52a5b0f941a81
+JH-UNI-2022-021,Vikas Sharma,1998-01-19,B.Tech CSE,2022,B,Jharkhand State University,2022-07-11,Degree,JHAR,valid,cc97f3fdd9b92eb9acc31725f112dece68d59a61363145f4e81d2e62a9a907ce
+JH-UNI-2022-022,Anita Kumari,1996-03-09,MBA Finance,2022,A+,Ranchi Tech Institute,2022-08-29,Degree,RANC,valid,9c482d08438089898a0891b731ab5bf22eecbf4f5939750c7f8319350848645a
+JH-UNI-2022-023,Ravi Singh,1997-06-14,BA English,2022,B,Jharkhand Business School,2022-10-06,Degree,JHAR,valid,0dd80190bb16b2b4096ab514445b5ad0b08c5a4471327926cdf12d2e101abcbe
+JH-UNI-2022-024,Kajal Yadav,1998-09-02,B.Sc Physics,2022,C,Jharkhand State University,2022-07-18,Degree,JHAR,valid,61ae144a5b54c096ddb6b6eff3c5d02a3a3a6305cb7e8704d3238dfd1efa395f
+JH-UNI-2022-025,Ajay Kumar,1995-12-20,BBA,2022,A,Ranchi Tech Institute,2022-09-14,Degree,RANC,valid,de18f11fa219e8ea67c06f12d91f9796ae12d4c3c3a156519face71025b93b23
+JH-UNI-2023-026,Sonali Mishra,1997-08-22,M.Sc Maths,2023,B+,Jharkhand State University,2023-06-23,Degree,JHAR,valid,ca4210515a1ec84a152f54b953e8e331b751b619189bced9ba321e3ede125211
+JH-UNI-2023-027,Arvind Chauhan,1996-02-05,B.Tech CSE,2023,A+,Jharkhand Business School,2023-08-31,Degree,JHAR,valid,b09a0030c77ae36b562ef5139775911719102cb39ef64d389c9ee62f03ce9375
+JH-UNI-2023-028,Preeti Sinha,1998-04-17,B.Sc Physics,2023,B,Ranchi Tech Institute,2023-07-12,Degree,RANC,valid,488064447a8e298e4665778a0df2ce0992ae268223d0153c21f626adbd8afbc4
+JH-UNI-2023-029,Naveen Kumar,1997-10-08,BA English,2023,A,Jharkhand State University,2023-09-25,Degree,JHAR,valid,616b929aeff32cf8b31bdcae0d605bad1dfbfb3606b8fca9b18d90fb5adb8e6f
+JH-UNI-2023-030,Ritika Verma,1996-01-28,MBA Finance,2023,C,Jharkhand Business School,2023-11-14,Degree,JHAR,valid,850b5678586fef1c985696b1b87f639c5913712f42e316b50fdf67fe42def48e
+JH-UNI-2023-031,Harsh Tiwari,1995-03-19,BBA,2023,B+,Jharkhand State University,2023-05-22,Degree,JHAR,valid,c7bc60114b8ea23b3b83419a3b57bf98199ee414174d38729a8b7e394bd4fa3b
+JH-UNI-2023-032,Shalini Singh,1998-11-11,B.Tech CSE,2023,A+,Ranchi Tech Institute,2023-07-09,Degree,RANC,valid,d70902d0329846110fcc67138197e2a9a71b66186f62d3812ed5f03d2451a337
+JH-UNI-2023-033,Deepak Kumar,1996-09-15,M.Sc Maths,2023,A,Jharkhand Business School,2023-08-28,Degree,JHAR,valid,26193f5a68a183fcc463a14ec300ce3b3daae39822c130caa26dc59138faf21a
+JH-UNI-2023-034,Rashmi Kumari,1997-05-06,B.Sc Physics,2023,B+,Jharkhand State University,2023-10-03,Degree,JHAR,valid,2b6bd7f5a29eda66813fd8d8e02a12b6bfd5c37772c658116e686e1414e68aa6
+JH-UNI-2023-035,Vivek Sharma,1998-02-19,MBA Finance,2023,B,Ranchi Tech Institute,2023-09-20,Degree,RANC,valid,f0f19308402a5ae589b5e318d6e2f6eca28fcff23d39e5c46fb8109f7869ff27
+JH-UNI-2023-036,Nisha Gupta,1995-12-30,B.Tech CSE,2023,C,Jharkhand Business School,2023-06-17,Degree,JHAR,valid,dada970e083ae721e8710184ab5c31bc5f224e2a639823a1af4352364fe99b7b
+JH-UNI-2023-037,Rahul Mehta,1996-08-21,B.Sc Physics,2023,A+,Jharkhand State University,2023-08-25,Degree,JHAR,valid,ad528f8b7c30df7b15ac7158b6f5e2d0feb6fa82744cd5650eca398dcb01abf0
+JH-UNI-2023-038,Sonia Kumari,1997-03-10,BA English,2023,B,Ranchi Tech Institute,2023-07-30,Degree,RANC,valid,c365b8a41aaf6c80c513d5274bbcd83f8872dc218662284e541f22ce4b9cd85b
+JH-UNI-2023-039,Ashok Yadav,1996-07-17,B.Tech CSE,2023,A,Jharkhand Business School,2023-10-12,Degree,JHAR,valid,4014fc639ab3535cd794acba1908d046ad9429eedb054f1f1fbdfee151bf71b7
+JH-UNI-2023-040,Divya Sinha,1995-11-04,BBA,2023,B+,Jharkhand State University,2023-09-02,Degree,JHAR,valid,7789275c4d7babf73d112a27000a9764d383916c752d59c472a1af96fab3646d
+JH-UNI-2023-041,Kunal Raj,1998-06-14,M.Sc Maths,2023,C,Ranchi Tech Institute,2023-08-11,Degree,RANC,valid,beb1463da1d25ff0c3f0be7b6e5f0562085eb610c108353a2cb6764f38613ce5
+JH-UNI-2023-042,Pallavi Kumari,1997-04-26,MBA Finance,2023,A+,Jharkhand Business School,2023-09-27,Degree,JHAR,valid,e2502a04009e49e8c13358e2023e3c1f86213e221c9adee993f87480c2411385
+JH-UNI-2023-043,Sachin Sharma,1996-12-15,B.Tech CSE,2023,A,Ranchi Tech Institute,2023-07-21,Degree,RANC,valid,2fd25f4ead65eedf86f76dbb5798282a28db6669f8eb075d40f3df4c594e7e9a
+JH-UNI-2023-044,Monika Devi,1997-09-19,B.Sc Physics,2023,B+,Jharkhand State University,2023-08-14,Degree,JHAR,valid,14a03127c4f0cbaf32d17e331b7ceabd4291035a80783b311d37a7ab18b25355
+JH-UNI-2023-045,Ramesh Kumar,1995-01-23,BBA,2023,A+,Jharkhand Business School,2023-10-09,Degree,JHAR,valid,1cbf63e562d9e424d554644bd5435a90f10b50b8c4790c8a02e094694d3e1d40
+JH-UNI-2023-046,Swati Agarwal,1996-03-28,BA English,2023,B,Jharkhand State University,2023-09-15,Degree,JHAR,valid,5bf29b7a0547036adf037c2db8dc9e578c63555780d26c706dfff155a49b40cb
+JH-UNI-2023-047,Gaurav Singh,1998-07-20,B.Tech CSE,2023,C,Ranchi Tech Institute,2023-11-05,Degree,RANC,valid,28115254622635a3d9009cf543993a42393f46675904e9e9d43bec1138e5fa80
+JH-UNI-2023-048,Payal Kumari,1997-02-08,M.Sc Maths,2023,A+,Jharkhand Business School,2023-08-19,Degree,JHAR,valid,29097a267aa3b70b651f35fc32578989aa0cc8f436717e6eede3140111013705
+JH-UNI-2023-049,Aditya Raj,1996-05-03,MBA Finance,2023,B,Jharkhand State University,2023-09-07,Degree,JHAR,valid,f7a7823f39e0c6ecc1ddaa6ca86a9706cdcdf66d2f54d1c655a7ca331a30e3f9
+JH-UNI-2023-050,Shreya Nair,1995-10-29,B.Sc Physics,2023,A,Ranchi Tech Institute,2023-07-26,Degree,RANC,valid,89889cf912e71800840ec1ba29f2c6740b8bf8e6ade9ac9271b3bb5c3e4f1cc2
+JH-UNI-2018-051,Neeraj Kumar,1997-04-02,B.Tech CSE,2018,B,Jharkhand State University,2018-06-18,Degree,JHAR,valid,cc839693986cbffbfa4f8fb4ff967990ab722266ca8ee7326d2901ffce9e16f8
+JH-UNI-2018-052,Geeta Singh,1996-09-30,BBA,2018,A,Ranchi Tech Institute,2018-08-05,Degree,RANC,valid,ba1aa1e9f4893bc9342fc4d698aaec598af5b064da8e228a16ae54295cae663e
+JH-UNI-2018-053,Manju Verma,1997-12-11,BA English,2018,B+,Jharkhand Business School,2018-10-22,Degree,JHAR,valid,70434a52ea2bd55fee26f47e9a0ad21a76e5d5b3eb5ba5c396ddc45d3d9ba1e4
+JH-UNI-2019-054,Suman Rao,1995-05-07,M.Sc Maths,2019,A,Jharkhand State University,2019-07-04,Degree,JHAR,valid,beb95e47653285f794530deafc92567763597b73a861e1e1ca259e18cb48e31f
+JH-UNI-2019-055,Vinod Patel,1996-02-25,MBA Finance,2019,B,Ranchi Tech Institute,2019-09-17,Degree,RANC,valid,f6d0e23659bd5ffb9a2c446a5789e084eb13d9bc308c1f210701b531f080b6af
+JH-UNI-2019-056,Rekha Gupta,1998-08-16,B.Sc Physics,2019,A+,Jharkhand Business School,2019-11-28,Degree,JHAR,valid,bf9820b0a5987f22cab7daf84b84fb92cc4e1a9d2c9dabb11b193db9efd4c45b
+JH-UNI-2020-057,Ajit Mehra,1995-11-12,B.Tech CSE,2020,B+,Jharkhand State University,2020-07-19,Degree,JHAR,valid,bfc07f5baf3a8ff9b2bcc6b075cfde9b42fecd3f542a39bd62ffe1792fcdeea4
+JH-UNI-2020-058,Kalpana Sinha,1996-01-08,BBA,2020,A,Ranchi Tech Institute,2020-09-23,Degree,RANC,valid,045779fc41cf40ffdbfb18f5dc9f8d175f5250dbb5e3009b4070bb9c58632e65
+JH-UNI-2020-059,Anupam Das,1997-06-02,BA English,2020,C,Jharkhand Business School,2020-10-30,Degree,JHAR,valid,264bbfc5943fc34e4acd12e59e2488b37fd9e40e9575f4099d3de28ec6faee56
+JH-UNI-2021-060,Kamla Devi,1998-03-15,B.Sc Physics,2021,A+,Jharkhand State University,2021-05-16,Degree,JHAR,valid,f1e84497abdef9f73433e29254712d63171f053d176f052526deb6d040794dd9
+JH-UNI-2021-061,Harinder Singh,1996-07-07,M.Sc Maths,2021,B,Ranchi Tech Institute,2021-08-19,Degree,RANC,valid,d1a77e1affcbe050030e7d855843d8c5b824e053a9d27051fe3ba15a09bd7e8d
+JH-UNI-2021-062,Leena Roy,1997-10-22,MBA Finance,2021,A,Jharkhand Business School,2021-11-02,Degree,JHAR,valid,67327577c2ef52cd8fd88fbad95f64a9cec947b865db46b91059fa0423fef384
+JH-UNI-2022-063,Sumit Jain,1995-09-13,B.Tech CSE,2022,B+,Jharkhand State University,2022-06-29,Degree,JHAR,valid,a90ad7beb942a8020421f8389d5fac48a453f6ccf88390255310b68baeacdd27
+JH-UNI-2022-064,Ritu Kumari,1998-12-05,BBA,2022,A,Ranchi Tech Institute,2022-08-12,Degree,RANC,valid,89a7b1c5e2725882fbcd9f13dffbda8e26eb7e1e5248ebf35ec5c1c1416eaa83
+JH-UNI-2022-065,Pradeep Kumar,1997-04-30,BA English,2022,C,Jharkhand Business School,2022-07-21,Degree,JHAR,valid,45b5ecc709d1fcd48ed3b87bbdd8a16ddde7dd7e20359939c7ef98e4a3427845
+JH-UNI-2023-066,Megha S,1996-02-27,M.Sc Maths,2023,B+,Jharkhand State University,2023-05-30,Degree,JHAR,valid,c5e2f9e20977d919bf1b62ad82755295c736723fd75b6e35b2af2626464d5dcf
+JH-UNI-2023-067,Arunesh Patel,1998-10-16,B.Tech CSE,2023,A,Ranchi Tech Institute,2023-07-04,Degree,RANC,valid,5b6374ea12823bbc958c263b29781115640784470259d75cae24b63328d20fe2
+JH-UNI-2023-068,Shreya Bose,1997-01-05,MBA Finance,2023,B,Jharkhand Business School,2023-09-13,Degree,JHAR,valid,cc8bb3b9c118fe4a25f43730347f015328181a3f5090bf2c50a4173b44a8e018
+JH-UNI-2018-069,Rajni Devi,1995-06-21,B.Sc Physics,2018,A+,Jharkhand State University,2018-08-02,Degree,JHAR,valid,2d36aa0ae21024776653d15970efa9ee969be7a9a05b6ed6144ebee12476edac
+JH-UNI-2019-070,Suraj N,1996-11-30,BBA,2019,B,Ranchi Tech Institute,2019-06-14,Degree,RANC,valid,fb58415551e2dd03dadee1c6719949541c3c437ee4b0dfbd1f76ff4c9fd6f92b
+JH-UNI-2020-071,Lata Sharma,1997-03-03,BA English,2020,B+,Jharkhand Business School,2020-11-19,Degree,JHAR,valid,9aee96914287d8560b94aac0006c54da54ecf096c8f5915d42a4c70b52efb1da
+JH-UNI-2021-072,Manoj Tiwari,1995-08-09,B.Tech CSE,2021,A,Ranchi Tech Institute,2021-07-27,Degree,RANC,valid,9d493f9dde1c2bc7a9e97d700cda0f4f3fa9428d9707e8c8081a6be53481c5e2
+JH-UNI-2022-073,Priyanka Roy,1998-05-02,M.Sc Maths,2022,C,Jharkhand State University,2022-09-08,Degree,JHAR,valid,93aa39beb5f41346e3f8d7fb25029856ff3562c39988b29617ef4a7bcbf65cdc
+JH-UNI-2023-074,Rajeev Kumar,1996-04-18,MBA Finance,2023,A+,Jharkhand Business School,2023-06-05,Degree,JHAR,valid,076e0f2c38fe1fe5a6a692ce4019d9078e2d6532397cbbb6b15d21a10f79f0df
+JH-UNI-2018-075,Sudha Pal,1997-02-28,B.Sc Physics,2018,B,Ranchi Tech Institute,2018-10-10,Degree,RANC,valid,b63d4871d44b3683683b2358e141252c045d86f1b3579f792691b2f40460cfd6
+JH-UNI-2019-076,Rajiv Singh,1995-12-12,B.Tech CSE,2019,A+,Jharkhand State University,2019-08-01,Degree,JHAR,valid,5356e209112a203265e2792f8afe5050886c06ca71c3af0928f1457dee084bca
+JH-UNI-2020-077,Kiran Patel,1996-09-01,BBA,2020,B,Jharkhand Business School,2020-06-15,Degree,JHAR,valid,013642c6d6f1e2164f2765c0890ec26a7133eef12842fd5fb230ad65d5aa2e02
+JH-UNI-2021-078,Nandini Sahu,1998-07-07,BA English,2021,A,Ranchi Tech Institute,2021-10-03,Degree,RANC,valid,3c41d2b383e2a3ac8e038e0f3eefe6c75cc8332dd067c50f149f50ea79bbc0b3
+JH-UNI-2022-079,Pranav Desai,1997-11-23,M.Sc Maths,2022,B+,Jharkhand State University,2022-07-29,Degree,JHAR,valid,a2a25585420f37a511cc72980324932d051689b67fd71201bd4eee14cf702c10
+JH-UNI-2023-080,Radha Menon,1996-06-02,B.Tech CSE,2023,A,Jharkhand Business School,2023-08-16,Degree,JHAR,valid,a53660be77d4e6e018eb7dd76e6776b350862d4a1146b1079ea5674e33e01530
+JH-UNI-2018-081,Sunil Kumar,1996-03-14,B.Sc Physics,2018,C,Ranchi Tech Institute,2018-09-09,Degree,RANC,valid,da9d1d8707080c3c2638507ed1f6ec4821e3dad5dc4c94d9f2801e73090a7a10
+JH-UNI-2019-082,Neetu Sharma,1997-01-25,BBA,2019,B+,Jharkhand State University,2019-11-06,Degree,JHAR,valid,9dcc4fc73715372338a5be639298890f59051cbff267af4cdeb541e7300d9715
+JH-UNI-2020-083,Kamal Kishore,1995-10-10,BA English,2020,A,Jharkhand Business School,2020-08-22,Degree,JHAR,valid,0840936daaed90ce2f0a436e0de859bf80d538160ac9f2b0d4d76e0e543fd8c7
+JH-UNI-2021-084,Reena Gupta,1998-04-01,B.Tech CSE,2021,B,Ranchi Tech Institute,2021-06-04,Degree,RANC,valid,e7f1ff58bb6e31ab2ddad4d8f0dcdd8d78409bcbfb093925e92b00e0e913fcc3
+JH-UNI-2022-085,Satish Rao,1996-05-16,M.Sc Maths,2022,A+,Jharkhand State University,2022-10-20,Degree,JHAR,valid,64ccb279852a29670c484a20398ad85099c6327a81303ce478153b0797083a7f
+JH-UNI-2023-086,Anu Paul,1997-09-29,MBA Finance,2023,B,Ranchi Tech Institute,2023-07-31,Degree,RANC,valid,cfce9d6db8467a3c8e2898d032a3880ac0105ea014c861971e563bb390bd08fc
+JH-UNI-2018-087,Dilip Yadav,1995-02-08,BBA,2018,A,Jharkhand Business School,2018-05-26,Degree,JHAR,valid,b76e51d65a33c86c75a46ec600292a7133e3ce06ba5c0aef2d0bda4fd582fa3b
+JH-UNI-2019-088,Kavita Rao,1996-07-04,B.Sc Physics,2019,B+,Jharkhand State University,2019-07-18,Degree,JHAR,valid,84d824668daf4c5dad77861b0d5112b44c62f200a3978bb55142115bf66d54be
+JH-UNI-2020-089,Mahesh Kumar,1997-11-02,B.Tech CSE,2020,C,Ranchi Tech Institute,2020-09-28,Degree,RANC,valid,1c62c6b22f716e461ad5400306551247f909c7b1883ba6478a33b47dfc8a43e7
+JH-UNI-2021-090,Priya Nair,1998-08-12,BA English,2021,A+,Jharkhand Business School,2021-08-08,Degree,JHAR,valid,c2ed1071e6a231246387ada3ebdde195eca3ec9e59c2ef10954009f775f20e6c
+JH-UNI-2022-091,Bikash Sen,1995-06-30,MBA Finance,2022,B,Ranchi Tech Institute,2022-09-30,Degree,RANC,valid,f533c9ca85a4af9457ee16a188459f0fd1746b66715515a893ea212658d8073f
+JH-UNI-2023-092,Sheetal Verma,1996-12-20,B.Sc Physics,2023,A+,Jharkhand State University,2023-06-12,Degree,JHAR,valid,8e99bbd3cab2086faa94b0eb874e49cf7f0ec4ed28c4e4c0b9929a49b40b2a8a
+JH-UNI-2018-093,Vinita Sharma,1997-05-05,BBA,2018,B,Ranchi Tech Institute,2018-11-03,Degree,RANC,valid,5490941dfa51d5afaf6399c8db05b093109c25a186d1ee737c50665a2632c436
+JH-UNI-2019-094,Ankur Bhatt,1996-02-14,M.Sc Maths,2019,A,Jharkhand Business School,2019-10-01,Degree,JHAR,valid,0a3bdfca82fdc1bdd262b1be6611a9c9fb47265cb19ae1273b9ca0003927645f
+JH-UNI-2020-095,Radha Singh,1995-09-19,B.Tech CSE,2020,B+,Jharkhand State University,2020-07-30,Degree,JHAR,valid,fe0d076e5771b7d1518cbb2d1ad338cf3f84d056f398705c2e843919d75b300c
+JH-UNI-2021-096,Sumitra Devi,1998-03-22,BA English,2021,A,Ranchi Tech Institute,2021-09-12,Degree,RANC,valid,9e86a605349714337b5a933bb745172d75b6568c0dca7898b0d27969dfed254c
+JH-UNI-2022-097,Chirag Mehta,1997-10-11,BBA,2022,C,Jharkhand Business School,2022-08-02,Degree,JHAR,valid,0528630448a2689c8f8dff6a69055143b534939a00a60b86f69886fc3d82ea88
+JH-UNI-2023-098,Komal Jain,1996-01-17,M.Sc Maths,2023,B+,Jharkhand State University,2023-07-18,Degree,JHAR,valid,298b4e47f51ba53814f8875e62d915cae6a0d9db4f8882c845c4687d8a006e80
+JH-UNI-2023-099,Abhishek Roy,1995-04-09,B.Tech CSE,2023,A,Ranchi Tech Institute,2023-09-01,Degree,RANC,valid,72443ab54a636817ab82aae4bab88f5c1bfd12ba28a723eb79db97b41592edeb
+JH-UNI-2023-100,Tanya Kapoor,1997-08-29,MBA Finance,2023,B,Jharkhand Business School,2023-10-14,Degree,JHAR,valid,64f615357b9e1f0c70479a5e8e80747411fb28b49dfb875daf359121a8c3ec8e
