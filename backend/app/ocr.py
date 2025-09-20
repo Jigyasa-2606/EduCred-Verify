@@ -24,7 +24,7 @@ def extract_fields(text):
 
     cert_id_value = None
     if cert_id:
-        cert_id_value = cert_id.group(1)  # ✅ now safe
+        cert_id_value = cert_id.group(1)
         cert_id_value = re.sub(r'[\s\-_]*', '-', cert_id_value)
         cert_id_value = re.sub(r'-+', '-', cert_id_value)
         cert_id_value = cert_id_value.strip("-")
