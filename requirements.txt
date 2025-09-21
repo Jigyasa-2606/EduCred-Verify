@@ -6,6 +6,10 @@ fastapi
 uvicorn[standard]
 flask
 
+fuzzywuzzy
+python-Levenshtein
+pyyaml
+
 
 # Image processing and OCR
 opencv-python
