@@ -1,55 +1,52 @@
-# backend/app/config.py
-# Predefined templates for each institution based on their certificate layout
+#config.py
 INSTITUTION_CONFIG = {
-    "JHAR": {  # Jharkhand State University
+    "JHAR": {
         "seal": {
-            "roi": [0.419, 0.172, 0.587, 0.318],
+            "roi":  [0.745, 0.047, 0.933, 0.263],
             "reference_image": "backend/assets/seals/jhar_seal.png",
-            "threshold": 0.3  # Lowered for testing
+            "threshold": 0.25
         },
         "signature": {
-            "roi": [0.585, 0.683, 0.725, 0.737],
+            "roi":  [0.513, 0.789, 0.729, 0.904],
             "reference_image": "backend/assets/signatures/jhar_signature.png",
-            "threshold": 0.05  # Lowered for testing
+            "threshold": 0.3
         }
     },
-    "RANC": {  # Ranchi Tech Institute
+    "RANC": {
         "seal": {
-            "roi": [0.426, 0.209, 0.580, 0.340],
+            "roi": [0.417, 0.025, 0.580, 0.248],
             "reference_image": "backend/assets/seals/ranc_seal.png",
-            "threshold": 0.3
+            "threshold": 0.25
         },
         "signature": {
-            "roi": [0.564, 0.709, 0.702, 0.741],
+            "roi": [0.591, 0.743, 0.856, 0.838],
             "reference_image": "backend/assets/signatures/ranc_signature.png",
-            "threshold": 0.05
+            "threshold": 0.4
         }
     },
-    "JHAR_BS": {  # Jharkhand Business School
+    "JHAR_BS": {
         "seal": {
-            "roi": [0.432, 0.279, 0.587, 0.393],
+            "roi":[0.387, 0.035, 0.617, 0.292],
             "reference_image": "backend/assets/seals/jhar_bs_seal.png",
-            "threshold": 0.3
+            "threshold": 0.25
         },
         "signature": {
-            "roi": [0.695, 0.671, 0.813, 0.702],
+            "roi": [0.722, 0.770, 0.897, 0.868],
             "reference_image": "backend/assets/signatures/jhar_bs_signature.png",
-            "threshold": 0.05
+            "threshold": 0.2
         }
     }
 }
 
-# Mapping from full institution name to code
 INSTITUTION_NAME_TO_CODE = {
     "Jharkhand State University": "JHAR",
-    "Ranchi Tech Institute": "RANC", 
+    "Ranchi Tech Institute": "RANC",
     "Jharkhand Business School": "JHAR_BS"
 }
 
-# Mapping from common OCR variations to standard names
 OCR_INSTITUTION_MAPPING = {
     "jharkhand state university": "Jharkhand State University",
-    "ranchi tech institute": "Ranchi Tech Institute", 
+    "ranchi tech institute": "Ranchi Tech Institute",
     "jharkhand business school": "Jharkhand Business School",
     "jsu": "Jharkhand State University",
     "rti": "Ranchi Tech Institute",

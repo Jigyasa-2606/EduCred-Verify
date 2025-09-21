@@ -1,22 +1,19 @@
-# backend/app/database.py
+#database.py
+
 import sqlite3
 import os
 
-# Get the path to the database file
 DATABASE_PATH = os.path.join(os.path.dirname(__file__), '..', 'your_database.db')
 
 def get_db_connection():
     conn = sqlite3.connect(DATABASE_PATH)
-    # This allows us to get rows as dictionaries, which is nicer
     conn.row_factory = sqlite3.Row
     return conn
 
 def init_database():
-    """Initializes the database tables and inserts initial institution data."""
     conn = get_db_connection()
     cursor = conn.cursor()
 
-    # 1. SQL CODE: Create the 'institutions' table
     create_table_sql = """
     CREATE TABLE IF NOT EXISTS institutions (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -28,7 +25,6 @@ def init_database():
     """
     cursor.execute(create_table_sql)
 
-    # 2. SQL CODE: Insert data for your institutions WITH CORRECTED PATHS
     institutions_data = [
         ('JHAR', 'Jharkhand State University', 'backend/assets/seals/jhar_seal.png', 'backend/assets/signatures/jhar_signature.png'),
         ('RANC', 'Ranchi Tech Institute', 'backend/assets/seals/ranc_seal.png', 'backend/assets/signatures/ranc_signature.png'),
@@ -41,14 +37,11 @@ def init_database():
     """
     cursor.executemany(insert_sql, institutions_data)
 
-    # Commit the changes and close the connection
     conn.commit()
     conn.close()
     print("Database initialized successfully!")
 
-# Function to get institution assets by code
 def get_institution_assets(institution_code):
-    """Query the database to get the file paths for an institution's seal and signature"""
     conn = get_db_connection()
     cursor = conn.cursor()
 
@@ -57,7 +50,5 @@ def get_institution_assets(institution_code):
     result = cursor.fetchone()
     conn.close()
     if result:
-        # Return the paths as a dictionary
         return {"seal_path": result['seal_image_path'], "signature_path": result['signature_image_path']}
-    else:
-        return None
+    return None

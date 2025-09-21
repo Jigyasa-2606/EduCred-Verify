@@ -10,8 +10,6 @@ db = pd.read_csv("/Users/jigyasaverma/Desktop/backend/Edu_cred_verify/EduCred-Ve
 def normalize(text):
     return re.sub(r'\s+', ' ', text).strip().upper()
 
-
-
 def clean_name(name):
     # Remove common trailing phrases that are not part of name
     name = re.sub(r'\b(PRESENTED.*|For completing.*|In the year.*)$', '', name, flags=re.IGNORECASE)
