@@ -1,4 +1,4 @@
-cert_id,name,dob,course,year,grade,institution,issued_on,certificate_type,institution_code,status,digital_hash
+certificate_no,name,dob,course,year,grade,institution,issued_on,certificate_type,institution_code,status,digital_hash
 JH-UNI-2018-001,Rajesh Kumar,1997-05-14,B.Tech CSE,2018,A+,Jharkhand State University,2018-07-11,Degree,JHAR,valid,d84b47f12b159277756b13d754465ac41529484c56702fc4aa5570dd28950f37
 JH-UNI-2018-002,Priya Sharma,1996-11-21,B.Sc Physics,2018,B+,Ranchi Tech Institute,2018-09-03,Degree,RANC,valid,e0546dcbd3eeae49f8ec49943f89bb6bda8fb58df6c5f4659d5e3ee96983e07a
 JH-UNI-2018-003,Amit Verma,1995-03-09,MBA Finance,2018,A,Jharkhand Business School,2018-12-20,Degree,JHAR,valid,2c87b9df4ebadb9446713d93637b34d28d00a271776c8c2203dc8faa6c8dc435

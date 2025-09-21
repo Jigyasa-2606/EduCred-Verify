@@ -1,70 +1,114 @@
-import re
-import pytesseract
-from PIL import Image
 import pandas as pd
+from PIL import Image
+import pytesseract
+import re
+from fuzzywuzzy import fuzz
 
-df = pd.read_csv("/ocr_dataset.csv")
+db = pd.read_csv("/Users/jigyasaverma/Desktop/backend/Edu_cred_verify/EduCred-Verify/datasets/ocr_dataset.csv")
 
-def normalize_cert_id(cert_id):
-    if cert_id:
-        cert_id = re.sub(r'\s*-\s*', '-', cert_id)
-        cert_id = cert_id.replace(" ", "")
-    return cert_id
+# Normalize text for fuzzy matching
+def normalize(text):
+    return re.sub(r'\s+', ' ', text).strip().upper()
 
 
-def extract_fields(text):
-    cert_id = re.search(r'(JH[\s\-_]*UNI[\s\-_]*\d{4}[\s\-_]*\d+)', text, re.IGNORECASE)
-    if not cert_id:
-        cert_id = re.search(r'(\b\d{4}[\s\-_]*\d+\b)', text)
-    dob = re.search(r'Date of Birth[:\s]*([\d°]{1,2}\s*\w+\s*\d{4})', text, re.IGNORECASE)
-    name = re.search(r'This certifies that\s*([A-Za-z ]+)', text, re.IGNORECASE)
-    if not name:
-        name = re.search(r'\n([A-Z][A-Z ]{2,})\n', text)
-    course = re.search(r'(?:study|program) in\s*([A-Za-z0-9 .&]+)', text, re.IGNORECASE)
 
-    cert_id_value = None
-    if cert_id:
-        cert_id_value = cert_id.group(1)
-        cert_id_value = re.sub(r'[\s\-_]*', '-', cert_id_value)
-        cert_id_value = re.sub(r'-+', '-', cert_id_value)
-        cert_id_value = cert_id_value.strip("-")
+def clean_name(name):
+    # Remove common trailing phrases that are not part of name
+    name = re.sub(r'\b(PRESENTED.*|For completing.*|In the year.*)$', '', name, flags=re.IGNORECASE)
+    # Keep only alphabetic parts
+    name = re.sub(r'[^A-Za-z\s]', '', name)
+    return name.strip()
+def extract_year(text, cert_no=None):
+    clean_text = text
+    if cert_no:
+        clean_text = clean_text.replace(cert_no, "")  # remove cert no part
 
-    return {
-        "cert_id": cert_id_value,
-        "dob": dob.group(1).replace("°", "").strip() if dob else None,
-        "name": name.group(1).strip().title() if name else None,
-        "course": course.group(1).strip() if course else None
-    }
+    # Look for year 19xx or 20xx
+    match = re.search(r'\b(19|20)\d{2}\b', clean_text)
+    if match:
+        return match.group(0)
+    return None
 
-def verify_certificate(image_path, df):
-    img = Image.open(image_path)
+# Extract certificate info including year
+def extract_certificate_info(img):
     text = pytesseract.image_to_string(img)
+    info = {}
 
-    print("\nExtracted OCR text:\n", text)
+    # Certificate ID
+    match = re.search(r'(JH[-_ ]?UNI[-_ ]?\d{4}[-_ ]?\d+)', text, re.IGNORECASE)
+    if match:
+        info["certificate_no"] = re.sub(r'[\s\-_]+', '-', match.group(1)).upper()
 
-    fields = extract_fields(text)
-    print("\nExtracted fields:", fields)
+    # Institution
+    match = re.search(r'(Ranchi Tech Institute|Jharkhand State University|Jharkhand Business School)', text, re.IGNORECASE)
+    if match:
+        info["institution"] = match.group(1).title()
 
-    if not fields["cert_id"]:
-        print("\n Could not extract Certificate ID from OCR text.")
-        return
+    # Name + Course block
+    # Name + Course block
+    match = re.search(r'(?:awarded to|is given to|THIS CERTIFICATE IS GIVEN TO)\s*\n?([A-Za-z\s]+)', text,
+                      re.IGNORECASE)
+    if match:
+        raw_name = re.sub(r'\s+', ' ', match.group(1)).strip()
 
-    record = df[df["cert_id"] == fields["cert_id"]]
+        # If course is stuck to name, split it
+        course_match = re.search(r'(BBA|M\.?Sc\s+[A-Za-z]+|BA\s+[A-Za-z]+)', raw_name, re.IGNORECASE)
+        if course_match:
+            info["course"] = course_match.group(1).strip()
+            raw_name = raw_name.replace(info["course"], "").strip()
 
-    if not record.empty:
-        print("\n Certificate FOUND in database:", record.to_dict(orient="records")[0])
+        info["name"] = clean_name(raw_name)
+
+    # # Course (fallback if not caught above)
+    # if "course" not in info:
+    #     match = re.search(r'(BBA|M\.?Sc\s+[A-Za-z]+|BA\s+[A-Za-z]+)', text, re.IGNORECASE)
+    #     if match:
+    #         info["course"] = match.group(1).strip()
+
+    # Year
+    # Certificate No
+    match = re.search(
+        r'Cert(?:ificate)?\s*No[:\-\s]*([A-Z0-9\-]+)',
+        text,
+        re.IGNORECASE
+    )
+    if match:
+        cert_no = match.group(1).strip()
+        info["certificate_no"] = cert_no
     else:
-        print("\n Certificate NOT found in database.")
+        info["certificate_no"] = "-"
 
+    # Year
+    year = extract_year(text, cert_no)
+    if year:
+        info["year"] = year
 
-certificates = [
-    "/Users/jigyasaverma/Desktop/backend/Edu_cred_verify/EduCred-Verify/backend/certificates/JBS Certificate.png",
-    "/Users/jigyasaverma/Desktop/backend/Edu_cred_verify/EduCred-Verify/backend/certificates/JSU Certificate (2).png",
-    "/Users/jigyasaverma/Desktop/backend/Edu_cred_verify/EduCred-Verify/backend/certificates/RTI Certificate (1).png"
-]
+    return info
 
-for cert in certificates:
-    print("\n==============================")
-    print("Checking:", cert)
-    print("==============================")
-    verify_certificate(cert, df)
+# Fuzzy validation
+def validate_certificate_fuzzy(info, db, threshold=90):
+    for _, row in db.iterrows():
+        score_cert = fuzz.ratio(normalize(info.get("certificate_no","")), normalize(row["certificate_no"]))
+        score_name = fuzz.ratio(normalize(info.get("name","")), normalize(row["name"]))
+        score_inst = fuzz.ratio(normalize(info.get("institution","")), normalize(row["institution"]))
+        # score_course = fuzz.ratio(normalize(info.get("course","")), normalize(row["course"]))
+        score_year = (info.get("year","") == str(row["year"]))
+
+        if score_cert > threshold and score_name > threshold and score_inst > threshold  and score_year:
+            return True, row.to_dict()
+    return False, None
+
+# Load image
+img = Image.open("/Users/jigyasaverma/Desktop/backend/Edu_cred_verify/EduCred-Verify/datasets/certificates/RTI_014.png")
+extracted_info = extract_certificate_info(img)
+print("Extracted:", extracted_info)
+
+# Validate
+valid, record = validate_certificate_fuzzy(extracted_info, db)
+
+if valid:
+    print("✅ Certificate is VALID")
+    print("Matched Record:", record)
+else:
+    print("❌ Certificate is INVALID")
+

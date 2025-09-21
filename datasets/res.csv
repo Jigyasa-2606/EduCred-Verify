@@ -1,0 +1,44 @@
+certificate_no,name,course,year,institution,image_file,status,match_score,db_record
+JH-UNI-2018-007,"Deepak Yadav
+
+For completing the study in BBA
+In the year",BBA,2019,Jharkhand State University,JSU_007.png,NOT FOUND,0.0,
+JH-UNI-2018-012,"Shruti Sinha
+
+For completing the study in",M.Sc Maths,2020,Jharkhand State University,JSU_012.png,NOT FOUND,0.0,
+JH-UNI-2018-002,Puya Shoana,,,Ranchi Tech Institute,RT002.png,MISMATCH,0.42,"{'certificate_no': 'JH-UNI-2018-002', 'name': 'Priya Sharma', 'course': 'B.Sc Physics', 'institution': 'Ranchi Tech Institute', 'year': np.int64(2018)}"
+JH-UNI-2018-004,"Sneha Gupta
+
+For completing the study in BA English
+In the year",BA English,2018,,JSU_004.png,MISMATCH,0.57,"{'certificate_no': 'JH-UNI-2018-004', 'name': 'Sneha Gupta', 'course': 'BA English', 'institution': 'Jharkhand State University', 'year': np.int64(2018)}"
+JH-UNI-2020-014,,,,Ranchi Tech Institute,RT14.png,MISMATCH,0.25,"{'certificate_no': 'JH-UNI-2020-014', 'name': 'Kavita Devi', 'course': 'B.Sc Physics', 'institution': 'Ranchi Tech Institute', 'year': np.int64(2020)}"
+JH-UNI-2018-001,"Rajesh Kumar
+
+For completing the study in",B.Tech CSE,2018,Jharkhand State University,JSU_001.png,VERIFIED,0.86,"{'certificate_no': 'JH-UNI-2018-001', 'name': 'Rajesh Kumar', 'course': 'B.Tech CSE', 'institution': 'Jharkhand State University', 'year': np.int64(2018)}"
+JH-UNI-2018-010,"Kiran Jha
+
+for completing their studies in BA English
+In the year",,2019,Jharkhand Business School,JBS_010 (2).PNG,NOT FOUND,0.0,
+JH-UNI-2020-011,"Aun Kuna
+
+PRESENTED ON THE",,,Ranchi Tech Institute,RT011.png,MISMATCH,0.36,"{'certificate_no': 'JH-UNI-2020-011', 'name': 'Arun Kumar', 'course': 'BBA', 'institution': 'Ranchi Tech Institute', 'year': np.int64(2020)}"
+JH-UNI-2018-005,Rohit Sa,,,Ranchi Tech Institute,RT005.png,MISMATCH,0.43,"{'certificate_no': 'JH-UNI-2018-005', 'name': 'Rohit Singh', 'course': 'M.Sc Maths', 'institution': 'Ranchi Tech Institute', 'year': np.int64(2018)}"
+JH-UNI-2018-003,"Amit Verma
+
+for completing their studies in MBA Finance
+In the year",,2018,Jharkhand Business School,JBS_003 (2).PNG,MISMATCH,0.56,"{'certificate_no': 'JH-UNI-2018-003', 'name': 'Amit Verma', 'course': 'MBA Finance', 'institution': 'Jharkhand Business School', 'year': np.int64(2018)}"
+JH-UNI-2018-006,"Anjali Kumari
+
+for completing their studies in",,2019,Jharkhand Business School,JBS_006 (2).PNG,NOT FOUND,0.0,
+JH-UNI-2018-016,"Sapna Kumari
+
+for completing their studies in",,2021,Jharkhand Business School,JBS_016 (2).PNG,NOT FOUND,0.0,
+JH-UNI-2018-013,"Manish Prasad
+
+for completing their studies in",,2020,Jharkhand Business School,JBS_013 (1).PNG,NOT FOUND,0.0,
+JH-UNI-2019-008,"Pooja Das
+
+PRESENTED ON THE",,,Ranchi Tech Institute,RT008.png,MISMATCH,0.38,"{'certificate_no': 'JH-UNI-2019-008', 'name': 'Pooja Das', 'course': 'B.Sc Physics', 'institution': 'Ranchi Tech Institute', 'year': np.int64(2019)}"
+JH-UNI-2018-009,"Alok Mishra
+
+For completing the study in",B.Tech CSE,2019,Jharkhand State University,JSU_009.png,NOT FOUND,0.0,
